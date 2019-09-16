@@ -221,6 +221,15 @@
 				text-align: center; 
 			}
 
+			.albumArt{
+				max-width: 255px;
+				border: 2px solid black;
+				margin-left: auto;
+				margin-right: auto;
+				display: none;
+				text-align: center; 
+			}
+
 			.overlay .text {
 				color: black;
 				font-size: 20px;
@@ -385,18 +394,35 @@
 					<a href="#introduction">An introduction</a>
 				</h2>
 				<div class="row">
-					<div class="col-xs-3">
-						<img class="selfie" src="resources/BackFromTaranto.jpg" alt="Picture of me" width="255">
-					</div>
-					<div class="col-xs-9">
+					<div class="col-xs-12">
 						<p> 
 							Hi, my name is Vincenzo and I am a full-stack software developer by trade based in Manchester, UK. Graduated from Manchester Metropolitan University in the class of 2018 with a First-class honours BSc in Computer Science. Currently, I am employed to work on a website application named, "AutoConvert", by a Worsley based software development company called Sandhurst Associates Ltd.
 						</p>
 						<p>
-							Outside of work, I am working on a musical side project called, "Summer Estate". The most recent release being <a target="_blank" href="https://summerestate.bandcamp.com/track/architect-5">Architect</a> which is a single that takes a modern approach to punk inspired hardcore-rock. Influenced by groups, Northlane, The Garden and Periphery.
+							Below you'll find my out of hours hobbies, a listing of employment and education history alongside recent projects I have been working on.
+						</p>
+					</div>
+				</div>
+				<h2>
+					<a style="padding-top: 100px;" href="#introduction">Divertissement</a>
+				</h2>
+				<div class="row">
+					<div class="col-xs-3">
+						<img class="albumArt" src="https://f4.bcbits.com/img/a2666115256_16.jpg">
+						<img class="albumArt" src="https://f4.bcbits.com/img/a0739660894_10.jpg">
+						<img class="albumArt" src="https://f4.bcbits.com/img/a2743314121_10.jpg">
+						<img class="albumArt" src="https://f4.bcbits.com/img/a1661245224_10.jpg">
+						<img class="albumArt" src="https://f4.bcbits.com/img/a1513900981_10.jpg">
+					</div>
+					<div class="col-xs-9">
+						<p>
+							Outside of programming, I am working on a musical side project called, "Summer Estate". The most recent release being <a target="_blank" href="https://summerestate.bandcamp.com/track/architect-5">Architect</a> which is a single that takes a modern approach to punk inspired hardcore-rock. Influenced by groups, Northlane, The Garden and Periphery.
 						</p>
 						<p>
-							Below you'll find my employment and education history alongside recent projects I have been working on.
+							In May 2018, I released my first EP called <a target="_blank" href="https://summerestate.bandcamp.com/album/provenance" >Provenance</a>, the EP has 6 songs in total with a prominent indie-rock feeling ubiquitous across all. The album takes some influence from Brazilian Bossa Nova, and in a Tropicália fashion, is combined with heavy flavours of modern indie and rock.
+						</p>
+						<p>
+							All music is written, performed, produced and mastered by me 
 						</p>
 					</div>
 				</div>
@@ -547,4 +573,21 @@
         $('.navbar-side').removeClass('top-of-page');
     }
 });
+</script>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("albumArt");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2500);
+}
 </script>
