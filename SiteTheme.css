@@ -63,6 +63,7 @@
 				text-align: center;
 			}
 			.pageTitleHeader {
+				cursor: default;
 				padding: 10px 0;
 				top: 30%;
 			}
@@ -196,6 +197,7 @@
 			}
 
 			.titleHeader {
+				cursor: default;
 				position: absolute;
 				width: 500px;
 				height: 50px;
