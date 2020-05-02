@@ -21,6 +21,23 @@
 				text-align: center;
 			}
 
+			.content {
+			  padding: 0 18px;
+			  max-height: 0;
+			  overflow: hidden;
+			  transition: max-height 0.2s ease-out;
+			}
+
+			.collapsible {
+				text-align: center;
+				border: 2px solid black;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				background-color: #e8e8bc;
+				cursor: pointer;
+			}
+
 			h4 {
 				text-align: center;
 			}
